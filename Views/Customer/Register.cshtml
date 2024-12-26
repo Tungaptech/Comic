@@ -1,0 +1,16 @@
+﻿@model Comic.Models.Customer
+
+<h1>Đăng ký khách hàng mới</h1>
+<form asp-action="Register" method="post">
+    <div class="form-group">
+        <label for="Fullname">Họ và tên</label>
+        <input type="text" asp-for="Fullname" class="form-control" />
+        <span asp-validation-for="Fullname" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="PhoneNumber">Số điện thoại</label>
+        <input type="text" asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Đăng ký</button>
+</form>

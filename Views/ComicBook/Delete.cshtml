@@ -1,0 +1,9 @@
+﻿@model Comic.Models.ComicBook
+
+<h1>Xóa sách</h1>
+<p>Bạn có chắc chắn muốn xóa sách <strong>@Model.Name</strong> không?</p>
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="ComicBookId" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

@@ -1,0 +1,27 @@
+﻿@model Comic.Models.ComicBook
+
+<h1>Chỉnh sửa sách</h1>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ComicBookId" />
+    <div class="form-group">
+        <label for="Name">Tên sách</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Author">Tác giả</label>
+        <input type="text" asp-for="Author" class="form-control" />
+        <span asp-validation-for="Author" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="PricePerDay">Giá mỗi ngày</label>
+        <input type="number" asp-for="PricePerDay" class="form-control" />
+        <span asp-validation-for="PricePerDay" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Quantity">Số lượng</label>
+        <input type="number" asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Cập nhật</button>
+</form>

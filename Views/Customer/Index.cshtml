@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Comic.Models.Customer>
+
+<h1>Danh sách khách hàng</h1>
+<a asp-action="Register" class="btn btn-primary">Thêm khách hàng mới</a>
+
+<table class="table table-bordered mt-3">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Họ và tên</th>
+        <th>Số điện thoại</th>
+        <th>Ngày đăng ký</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>@customer.CustomerId</td>
+            <td>@customer.Fullname</td>
+            <td>@customer.PhoneNumber</td>
+            <td>@customer.RegisterDate.ToString("dd/MM/yyyy")</td>
+        </tr>
+    }
+    </tbody>
+</table>

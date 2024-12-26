@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Comic.Models.Rental>
+
+<h1>Danh sách phiếu thuê</h1>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Khách hàng</th>
+        <th>Ngày thuê</th>
+        <th>Ngày trả</th>
+        <th>Trạng thái</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var rental in Model)
+    {
+    <tr>
+        <td>@rental.RentalId</td>
+        <td>@rental.Customer.Fullname</td>
+        <td>@rental.RentalDate.ToString("dd/MM/yyyy")</td>
+        <td>@rental.ReturnDate.ToString("dd/MM/yyyy")</td>
+        <td>@rental.Status</td>
+    </tr>
+    }
+    </tbody>
+</table>
